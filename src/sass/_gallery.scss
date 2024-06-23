@@ -1,0 +1,38 @@
+
+
+.gallery
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    &__desktop-img 
+    {
+        display: none;
+    }
+
+    &__mobile-img
+    {
+        display: block;
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 768px)
+{
+    .gallery 
+    {
+        grid-template-columns: repeat(4, 25%);
+        grid-template-rows: auto;
+
+        &__mobile-img
+        {
+            display: none;
+        }
+        &__desktop-img
+        {
+            display: block;
+            width: 100%;
+        }
+    }
+}
