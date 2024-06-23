@@ -1,0 +1,154 @@
+
+
+.top-section 
+{
+    text-align: center;
+    &__mobile-img 
+    {
+        width: 100%;
+        display: block;
+    }
+    &__desktop-img 
+    {
+        display: none;
+    }
+
+    &__content
+    {
+        padding: 4rem 6.4%;
+    }
+
+
+    &__title
+    {
+        color: $color-DarkGrey;
+        font-size: 2rem;
+    }
+
+    &__body 
+    {
+        @extend .body-m;
+        color: $color-Grey;
+    }
+
+    
+
+  
+}
+
+.top__btn 
+{
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+    background: none;
+    border:none;
+    font-family: inherit;
+    font-size: 15px;
+    padding: .25rem .5rem;
+    z-index: 99;
+    &::before
+    {
+        display: block;
+        content:  '';
+        position: absolute;
+        bottom:0px;
+        left:0px;
+        width: 100%;
+        height: 10px;
+        border-radius: 28px;
+        opacity: 25%;
+        transition: all 300ms;
+        z-index: -1;
+    }
+
+    &:hover::before
+    {
+        opacity: 100%;
+    }
+}
+
+
+.transform-section
+{
+    display: flex;
+    flex-direction: column-reverse;
+
+    &__btn
+    {
+        @extend .top__btn;
+
+        &::before 
+        {
+            background-color: $color-Yellow;
+        }
+    }
+}
+
+.standout-section
+{
+    &__btn
+    {
+        @extend .top__btn;
+
+        &::before
+        {
+            background-color: $color-Red;
+        }
+    }
+}
+
+
+@media (min-width: 768px)
+{
+    .top-section
+    {
+        display: flex;
+        text-align: left;
+        flex-direction: row;
+
+        &__mobile-img 
+        {
+            display: none;
+        }
+
+        &__desktop-img 
+        {
+            display: block;
+            width: 50%;
+        }
+
+        &__content 
+        {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            padding: 9.8rem 0;
+        }
+
+        &__title
+        {
+            font-size: 2.5rem;
+        }
+    }
+
+    .transform-section
+    {
+        &__content 
+        {
+            padding-left: 11.4%;
+            padding-right: 6.875rem;
+        }
+    }
+
+    .standout-section
+    {
+        &__content
+        {
+            padding-right: 11.4%;
+            padding-left: 6.875rem;
+        }
+    }
+}

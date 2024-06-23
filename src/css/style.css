@@ -35,10 +35,104 @@ p, a {
   transition: all 300ms;
 }
 
-.body-m, .nav__link {
+.body-m, .nav__link, .top-section__body {
   font-size: 1.125rem;
 }
 
+.top-section {
+  text-align: center;
+}
+.top-section__mobile-img {
+  width: 100%;
+  display: block;
+}
+.top-section__desktop-img {
+  display: none;
+}
+.top-section__content {
+  padding: 4rem 6.4%;
+}
+.top-section__title {
+  color: #24303E;
+  font-size: 2rem;
+}
+.top-section__body {
+  color: #808397;
+}
+
+.top__btn, .standout-section__btn, .transform-section__btn {
+  cursor: pointer;
+  text-transform: uppercase;
+  position: relative;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 15px;
+  padding: 0.25rem 0.5rem;
+  z-index: 99;
+}
+.top__btn::before, .standout-section__btn::before, .transform-section__btn::before {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 10px;
+  border-radius: 28px;
+  opacity: 25%;
+  transition: all 300ms;
+  z-index: -1;
+}
+.top__btn:hover::before, .standout-section__btn:hover::before, .transform-section__btn:hover::before {
+  opacity: 100%;
+}
+
+.transform-section {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.transform-section__btn::before {
+  background-color: #FAD400;
+}
+
+.standout-section__btn::before {
+  background-color: #FE7766;
+}
+
+@media (min-width: 768px) {
+  .top-section {
+    display: flex;
+    text-align: left;
+    flex-direction: row;
+  }
+  .top-section__mobile-img {
+    display: none;
+  }
+  .top-section__desktop-img {
+    display: block;
+    width: 50%;
+  }
+  .top-section__content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 9.8rem 0;
+  }
+  .top-section__title {
+    font-size: 2.5rem;
+  }
+  .transform-section__content {
+    padding-left: 11.4%;
+    padding-right: 6.875rem;
+  }
+  .standout-section__content {
+    padding-right: 11.4%;
+    padding-left: 6.875rem;
+  }
+}
 .header {
   padding: 2rem 6.4% 8.5rem;
   background-image: url(../../images/mobile/image-header.jpg);
