@@ -23,4 +23,155 @@ p, a {
   margin-bottom: 0;
 }
 
+.btn, .nav__btn, .menu__btn {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  border-radius: 28px;
+  font-size: 15px;
+  border: none;
+  font-family: inherit;
+  color: #24303E;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.body-m, .nav__link {
+  font-size: 1.125rem;
+}
+
+.header {
+  padding: 2rem 6.4% 8.5rem;
+  background-image: url(../../images/mobile/image-header.jpg);
+  background-size: cover;
+  background-position: bottom center;
+  text-align: center;
+  color: white;
+}
+
+.masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5.5rem;
+}
+.masthead__logo {
+  width: 123px;
+}
+.masthead__menu-btn {
+  cursor: pointer;
+  transition: all 300ms;
+}
+.masthead__menu-btn:hover {
+  transform: scale(1.2);
+}
+
+.nav {
+  display: none;
+}
+.nav__list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+}
+
+.hero__title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.3em;
+}
+
+.menu {
+  background-color: white;
+  text-align: center;
+  padding: 3.93rem 0 2.43rem;
+  width: 87.7%;
+  opacity: 0%;
+  pointer-events: none;
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 300ms;
+}
+.menu--open {
+  opacity: 100%;
+  pointer-events: all;
+}
+.menu::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 0 24px 24px;
+  border-color: transparent transparent #FFFFFF transparent;
+  transform: rotate(0deg) translateY(-100%);
+}
+.menu__list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.menu__link {
+  color: #808397;
+  text-decoration: none;
+}
+.menu__btn {
+  background-color: #FAD400;
+}
+.menu__btn:hover {
+  transform: scale(1.1);
+}
+
+.nav__list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  gap: 2.93rem;
+}
+.nav__link {
+  text-decoration: none;
+  color: inherit;
+}
+.nav__btn {
+  background-color: white;
+}
+.nav__btn:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding: 2.125rem 2.7% 20.6rem;
+    background-image: url(../../images/desktop/image-header.jpg);
+  }
+  .masthead {
+    margin-bottom: 6.56rem;
+  }
+  .masthead__logo {
+    width: 170px;
+  }
+  .masthead__menu-btn {
+    display: none;
+  }
+  .menu {
+    display: none;
+  }
+  .nav {
+    display: block;
+  }
+  .hero__title {
+    font-size: 3.5rem;
+    margin-bottom: 6rem;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
