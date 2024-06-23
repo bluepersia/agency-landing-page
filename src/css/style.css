@@ -3,6 +3,10 @@ body {
   font-family: "Fraunces", serif;
 }
 
+p {
+  line-height: 1.6;
+}
+
 p, a {
   font-family: "Barlow", sans-serif;
 }
