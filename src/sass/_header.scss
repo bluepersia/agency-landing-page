@@ -118,3 +118,75 @@
         }
     }
 }
+
+
+.nav {
+   
+
+    &__list 
+    {
+        list-style: none;
+        padding-left: 0;
+        display: flex;
+        gap: 2.93rem;
+    }
+
+    &__link
+    {
+        @extend .body-m;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &__btn
+    {
+        @extend .btn;
+        background-color: $color-White;
+
+        &:hover
+        {
+            background-color: rgba(255, 255, 255, 25%);
+            color:$color-White;
+        }
+    }
+}
+
+
+@media (min-width: 768px)
+{
+    .header {
+        padding: 2.125rem 2.7% 20.6rem;
+        background-image: url(../../images/desktop/image-header.jpg);
+    }
+    .masthead 
+    {
+        margin-bottom: 6.56rem;
+        &__logo
+        {
+            width: 170px;
+        }
+
+        &__menu-btn
+        {
+            display: none;
+        }
+    }
+
+    .menu 
+    {
+        display: none;
+    }
+
+    .nav {
+        display: block;
+    }
+
+    .hero 
+    {
+        &__title
+        {
+            font-size: 3.5rem;
+            margin-bottom: 6rem;
+        }
+    }
+}
