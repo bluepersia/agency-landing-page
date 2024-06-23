@@ -361,5 +361,30 @@ p, a {
     max-width: 350px;
   }
 }
+.gallery {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.gallery__desktop-img {
+  display: none;
+}
+.gallery__mobile-img {
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: auto;
+  }
+  .gallery__mobile-img {
+    display: none;
+  }
+  .gallery__desktop-img {
+    display: block;
+    width: 100%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
