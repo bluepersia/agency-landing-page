@@ -1,0 +1,49 @@
+
+.feature 
+{
+    padding: 24.87rem 6.4% 3.75rem;
+    background-size: cover;
+    background-position: top center;
+    text-align: center;
+
+    &__title
+    {
+        font-size: 1.75rem;
+    }
+}
+
+.graphic-feature
+{
+    background-image: url(../../images/mobile/image-graphic-design.jpg);
+    color: $color-GraphicDesignText;
+}
+
+
+.photography-feature
+{
+    background-image: url(../../images/mobile/image-photography.jpg);
+    color: $color-PhotographyText;
+}
+
+
+
+@media (min-width: 768px)
+{
+    .features 
+    {
+        display: flex;
+        align-items: stretch;
+    }
+
+    .graphic-feature 
+    {
+        width: 50%;
+        background-image: urL(../../images/desktop/image-graphic-design.jpg);
+    }
+
+    .photography-feature
+    {
+        width: 50%;
+        background-image: url(../../images/desktop/image-photography.jpg);
+    }
+}
