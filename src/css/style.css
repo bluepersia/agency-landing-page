@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: "Fraunces", serif;
+}
+
+p, a {
+  font-family: "Barlow", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+* :first-child {
+  margin-top: 0;
+}
+
+* :last-child {
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

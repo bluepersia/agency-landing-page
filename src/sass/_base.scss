@@ -1,0 +1,40 @@
+$color-Yellow: #FAD400;
+$color-Red: #FE7766;
+$color-GraphicDesignText: #24554A;
+$color-PhotographyText: #052C3B;
+$color-Footer: #458D7E;
+
+$color-White: white;
+$color-DarkGrey: #24303E;
+$color-Grey:#808397;
+$color-TestimonialsTitleAndPos: #A7AAAD;
+$color-TestimonialsBody: #5B636D;
+$color-ContactBg: rgba(255, 255, 255, 25%);
+
+$font-Fraunces:  "Fraunces", serif;
+$font-Barlow: "Barlow", sans-serif;
+
+body 
+{
+    margin: 0;
+    font-family: $font-Fraunces;
+}
+
+p, a 
+{
+    font-family: $font-Barlow;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+* :first-child 
+{
+    margin-top: 0;
+}
+
+* :last-child
+{
+    margin-bottom: 0;
+}
